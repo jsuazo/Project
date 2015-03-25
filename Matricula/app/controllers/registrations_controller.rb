@@ -27,6 +27,8 @@ class RegistrationsController < ApplicationController
   # POST /registrations.json
   def create
     @registration = Registration.new(registration_params)
+   if Registration.where(:level_id => @registration.level_id, :student_id => @registration.student_id).count != 0
+)
 
     respond_to do |format|
       if @registration.save

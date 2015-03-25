@@ -15,7 +15,6 @@
     <% @registrations.each do |registration| %>
       <tr>
         <td><%= registration.level.name %></td>
-
         <td><%=  registration.student.name %></td>
         <td><%= link_to 'Show', registration %></td>
         <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
